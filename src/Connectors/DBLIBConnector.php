@@ -39,7 +39,7 @@ class DBLIBConnector extends BaceConnector implements ConnectorInterface
          * @var string $database
          */
         extract($config);
-        
+
         return isset($config['port'])
             ? "dblib:host={$host};port={$port};dbname={$database}"
             : "dblib:host={$host};dbname={$database}";
