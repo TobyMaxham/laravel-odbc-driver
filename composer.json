@@ -1,0 +1,29 @@
+{
+  "name": "tobymaxham/laravel-odbc-driver",
+  "description": "An ODBC Driver for SQL Server within Laravel",
+  "keywords": [
+    "tobymaxham",
+    "laravel", "sqlserver", "odbc"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "TobyMaxham",
+      "email": "git2016@maxham.de"
+    }
+  ],
+  "homepage": "http://maxham.de",
+  "support": {
+    "issues": "https://github.com/TobyMaxham/laravel-odbc-driver/issues",
+    "source": "https://github.com/TobyMaxham/laravel-odbc-driver"
+  },
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "TobyMaxham\\Database\\": "src"
+    }
+  },
+  "minimum-stability": "dev"
+}
