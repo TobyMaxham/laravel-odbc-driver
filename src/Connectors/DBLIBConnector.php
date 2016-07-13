@@ -23,7 +23,9 @@ class DBLIBConnector extends BaceConnector implements ConnectorInterface
     public function connect(array $config)
     {
         $dsn = $this->getDsn($config);
-        $connection = $this->createConnection($dsn, $config);
+        $options = $this->getOptions($config);
+        
+        $connection = $this->createConnection($dsn, $config, $options);
         return $connection;
     }
 
@@ -52,16 +54,16 @@ class DBLIBConnector extends BaceConnector implements ConnectorInterface
      * @param  array $config
      * @return \PDO
      */
-    public function createConnection($dsn, array $config)
+    public function createConnection($dsn, array $config, array $options)
     {
         $username = Arr::get($config, 'username');
         $password = Arr::get($config, 'password');
 
         try {
-            $pdo = new PDO($dsn, $username, $password);
+            $pdo = new PDO($dsn, $username, $password, $options);
         } catch (Exception $e) {
             $pdo = $this->tryAgainIfCausedByLostConnection(
-                $e, $dsn, $username, $password
+                $e, $dsn, $username, $password, $options
             );
         }
 
