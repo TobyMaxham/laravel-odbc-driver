@@ -8,11 +8,11 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "TobyMaxham",
+      "name": "Tobias Maxham",
       "email": "git2016@maxham.de"
     }
   ],
-  "homepage": "http://maxham.de",
+  "homepage": "https://maxham.de",
   "support": {
     "issues": "https://github.com/TobyMaxham/laravel-odbc-driver/issues",
     "source": "https://github.com/TobyMaxham/laravel-odbc-driver"
